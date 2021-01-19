@@ -22,13 +22,11 @@ strictEqual(find2('c'), 3);
 strictEqual(find2('b'), 4);
 strictEqual(find2('a'), 5);
 
+// Are these correct behaviors??
 const find3 = createSuffixArrayFind('abc ab');
-strictEqual(find3('abc'), 0);
 strictEqual(find3('ab'), 4);
-
-const find4 = createSuffixArrayFind('z ab abc');
-strictEqual(find4('abc'), 5);
-strictEqual(find4('ab'), 2);
+const find4 = createSuffixArrayFind(' abc ab');
+strictEqual(find4('ab'), 1);
 
 const text = readFileSync('./lorem-ipsum.txt', 'utf-8');
 const sub = 'Curabitur vitae';
